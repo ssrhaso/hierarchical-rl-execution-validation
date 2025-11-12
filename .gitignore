@@ -26,11 +26,12 @@ pip-wheel-metadata/
 .installed.cfg
 *.egg
 
-# Virtual Environments
+# Environments
 venv/
 ENV/
 env/
 .venv
+.env/
 
 # IDE
 .vscode/
