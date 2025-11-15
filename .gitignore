@@ -1,8 +1,3 @@
-# Data & Models
-data/
-*.csv
-*.pkl
-
 # Python
 __pycache__/
 *.py[cod]
@@ -22,31 +17,90 @@ sdist/
 var/
 wheels/
 pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Environments
+# Virtual Environments
 venv/
 ENV/
 env/
 .venv
-.env/
+.ENV
 
-# IDE
+# IDE & Editor
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 .DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.vim/
+.emacs.d/
+*.code-workspace
 
-# Environment & Secrets
+# Project-Specific - Generated Files
+# Logs (DO NOT COMMIT)
+logs/
+*.log
+
+# Results & Data (DO NOT COMMIT - except in documentation)
+results/validation_results.csv
+results/summary_report.txt
+results/visualizations/
+results/*.csv
+results/*.txt
+results/*.pkl
+
+# Models - OLD VERSIONS (keep only final)
+models/checkpoints/
+models/ppo_strategic_real_data.zip      # Old version
+models/ppo_strategic_stage*.zip         # Old versions
+models/dqn_guided_stage*.zip            # Old versions
+
+# Environment & Credentials (SECURITY)
 .env
 .env.local
 .env.*.local
+*.pem
+*.key
+secrets/
 
-# Results & Logs
-results/
-logs/
-*.log
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+tempCodeRunnerFile.py
+
+# OS Specific
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Tensorboard (Training Logs)
+logs/tensorboard/
+logs/*/
+runs/
+
+# Keep these important files
+!.gitkeep
+!models/dqn_guided_real_data.zip
+!models/ppo_strategic_real_data_v2.zip
+!results/.gitkeep
